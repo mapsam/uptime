@@ -15,7 +15,7 @@ response = ping("google.com", 1)
 # if the response is anything other than 0, log it
 # this means that we are only keeping track of downtime
 # since all 0 responses are up and good to go
-if response > -1:
+if response > 0:
         stamp = date.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
         result_dict = {'stamp': stamp, 'response': response}
 
